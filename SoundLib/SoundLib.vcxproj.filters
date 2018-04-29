@@ -14,12 +14,28 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
     <Filter Include="src">
-      <UniqueIdentifier>{65733e7c-7fd0-4aae-b1c8-867c3ba44287}</UniqueIdentifier>
+      <UniqueIdentifier>{166de650-486d-42c7-984c-ad19d44f8e4f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="App.cpp">
+    <ClCompile Include="SoundLib.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="Third Party\AudioFile\AudioFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SoundLib.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="Third Party\AudioFile\AudioFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Test Data\1kHz_44100Hz_16bit_30sec.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
   </ItemGroup>
 </Project>
