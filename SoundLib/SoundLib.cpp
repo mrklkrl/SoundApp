@@ -22,21 +22,9 @@ namespace SoundLib {
 		
 		RMS = sqrt(RMS/numSamples);
 		
-		switch (bitDepth)
-		{
-		case 8:
-			RMS = 10 * log10(RMS / 127);
-			break;
-		case 16:
-			RMS = 10 * log10(RMS/32760);
-			break;
-		case 32:
-			RMS = 10 * log10(RMS);
-			break;
-		default:
-			break;
-		}
-		
+		// AudioFile.cpp normalizes the range for 8 and 16 bit wav file samples to be between -1 and 1. 
+		// How nice of them!
+		RMS = 10 * log10(RMS);
 		return RMS;
 	}
 	double AudioObject::GetPeak(int channel)
