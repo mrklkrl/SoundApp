@@ -9,5 +9,7 @@ int main()
 	SoundLib::AudioObject testData(FILEPATH, "Test Data");
 	testData.GetRMS(0);
 	testData.GetPeak(0);
+	std::cout << "Press Enter to exit." << std::endl;
+	std::cin.ignore();
 	return 0;
 }

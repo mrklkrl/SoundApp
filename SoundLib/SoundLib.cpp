@@ -40,7 +40,7 @@ namespace SoundLib {
 		RMS = PercentToDB(RMS);
 
 		PrintMsg("RMS of " + this->Name + " : ");
-		std::cout << RMS << std::endl;
+		std::cout << "\t\t\t\t" << RMS << " dB" <<  std::endl;
 		return RMS;
 	}
 	double AudioObject::GetPeak(int channel)
@@ -65,7 +65,7 @@ namespace SoundLib {
 		Peak = PercentToDB(Peak);
 
 		PrintMsg("Peak of " + this->Name + " : ");
-		std::cout << Peak << std::endl;
+		std::cout << "\t\t\t\t" <<  Peak << " dB" << std::endl;
 		return Peak;
 	}
 
