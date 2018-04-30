@@ -74,9 +74,7 @@ namespace SoundLib {
 	{
 		return 10 * log10(percent);;
 	}
-	AudioObject::AudioObject()
-	{
-	}
+
 	AudioObject::AudioObject(std::string filePath, std::string name)
 	{
 		this->Name = name;

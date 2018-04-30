@@ -14,7 +14,6 @@ namespace SoundLib {
 		double GetRMS(int channel);
 		double GetPeak(int channel);
 		double PercentToDB(double percent);
-		AudioObject();
 		AudioObject(std::string filePath, std::string name);
 		~AudioObject();
 	};
