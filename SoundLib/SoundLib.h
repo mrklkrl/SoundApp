@@ -4,17 +4,18 @@
 #include <vector>
 
 namespace SoundLib {
-	void PrintMsg();
+	void PrintMsg(std::string message);
 
 	class AudioObject 
 	{
 	public:
 		AudioFile<double> audioFile;
+		std::string Name;
 		double GetRMS(int channel);
 		double GetPeak(int channel);
 		double PercentToDB(double percent);
 		AudioObject();
-		AudioObject(std::string filePath);
+		AudioObject(std::string filePath, std::string name);
 		~AudioObject();
 	};
 }
