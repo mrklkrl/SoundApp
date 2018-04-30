@@ -11,14 +11,32 @@ namespace SoundLib {
 	{
 		double RMS = 0;
 		int numSamples = this->audioFile.getNumSamplesPerChannel();
+		int bitDepth = this->audioFile.getBitDepth();
+		
 		for (int i = 0; i < numSamples; i++)
 		{
 			double currentSample = this->audioFile.samples[channel][i];
 			currentSample = currentSample * currentSample;
 			RMS += currentSample;
 		}
+		
 		RMS = sqrt(RMS/numSamples);
-		RMS = 10*log10(RMS);
+		
+		switch (bitDepth)
+		{
+		case 8:
+			RMS = 10 * log10(RMS / 127);
+			break;
+		case 16:
+			RMS = 10 * log10(RMS/32760);
+			break;
+		case 32:
+			RMS = 10 * log10(RMS);
+			break;
+		default:
+			break;
+		}
+		
 		return RMS;
 	}
 	double AudioObject::GetPeak(int channel)
